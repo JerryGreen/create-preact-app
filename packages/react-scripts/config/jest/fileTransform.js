@@ -10,19 +10,11 @@ module.exports = {
     const assetFilename = JSON.stringify(path.basename(filename));
 
     if (filename.match(/\.svg$/)) {
-      return `const React = require('react');
+      return `const preact = require('preact');
       module.exports = {
         __esModule: true,
         default: ${assetFilename},
-        ReactComponent: React.forwardRef((props, ref) => ({
-          $$typeof: Symbol.for('react.element'),
-          type: 'svg',
-          ref: ref,
-          key: null,
-          props: Object.assign({}, props, {
-            children: ${assetFilename}
-          })
-        })),
+        ReactComponent: (props) => preact.h('svg', props, ${assetFilename}),
       };`;
     }
 

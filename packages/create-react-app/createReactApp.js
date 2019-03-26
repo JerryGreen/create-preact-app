@@ -380,7 +380,7 @@ function run(
   useTypescript
 ) {
   const packageToInstall = getInstallPackage(version, originalDirectory);
-  const allDependencies = ['react', 'react-dom', packageToInstall];
+  const allDependencies = ['preact', 'preact-compat', packageToInstall];
   if (useTypescript) {
     // TODO: get user's node version instead of installing latest
     allDependencies.push(
@@ -737,8 +737,8 @@ function setCaretRangeForRuntimeDeps(packageName) {
     process.exit(1);
   }
 
-  makeCaretRange(packageJson.dependencies, 'react');
-  makeCaretRange(packageJson.dependencies, 'react-dom');
+  makeCaretRange(packageJson.dependencies, 'preact');
+  makeCaretRange(packageJson.dependencies, 'preact-compat');
 
   fs.writeFileSync(packagePath, JSON.stringify(packageJson, null, 2) + os.EOL);
 }
