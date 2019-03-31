@@ -12,6 +12,7 @@ export default () => {
   return <Logo id="feature-svg-component" />;
 };
 
-export const SvgComponentWithRef = React.forwardRef((props, ref) => (
-  <Logo id="feature-svg-component-with-ref" ref={ref} />
-));
+// no forwardRef in preact
+// export const SvgComponentWithRef = React.forwardRef((props, ref) => (
+//   <Logo id="feature-svg-component-with-ref" ref={ref} />
+// ));

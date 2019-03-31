@@ -7,7 +7,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import SvgComponent, { SvgComponentWithRef } from './SvgComponent';
+import SvgComponent from './SvgComponent';
 
 describe('svg component', () => {
   it('renders without crashing', () => {
@@ -16,12 +16,12 @@ describe('svg component', () => {
     expect(div.textContent).toBe('logo.svg');
   });
 
-  it('svg root element equals the passed ref', () => {
-    const div = document.createElement('div');
-    const someRef = React.createRef();
-    ReactDOM.render(<SvgComponentWithRef ref={someRef} />, div);
-    const svgElement = div.getElementsByTagName('svg');
-    expect(svgElement).toHaveLength(1);
-    expect(svgElement[0]).toBe(someRef.current);
-  });
+  // it('svg root element equals the passed ref', () => {
+  //   const div = document.createElement('div');
+  //   const someRef = React.createRef();
+  //   ReactDOM.render(<SvgComponentWithRef ref={someRef} />, div);
+  //   const svgElement = div.getElementsByTagName('svg');
+  //   expect(svgElement).toHaveLength(1);
+  //   expect(svgElement[0]).toBe(someRef.current);
+  // });
 });
