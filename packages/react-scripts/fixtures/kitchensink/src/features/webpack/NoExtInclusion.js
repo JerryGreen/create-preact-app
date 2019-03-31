@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
+import { h } from 'preact';
 import aFileWithoutExt from './assets/aFileWithoutExt';
 
 const text = aFileWithoutExt.includes('base64')

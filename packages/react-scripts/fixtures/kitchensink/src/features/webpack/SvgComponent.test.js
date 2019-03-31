@@ -5,14 +5,13 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
-import ReactDOM from 'react-dom';
+import { render, h } from 'preact';
 import SvgComponent from './SvgComponent';
 
 describe('svg component', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<SvgComponent />, div);
+    render(<SvgComponent />, div);
     expect(div.textContent).toBe('logo.svg');
   });
 

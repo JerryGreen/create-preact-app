@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
+import { h } from 'preact';
 import tiniestCat from './assets/tiniest-cat.jpg';
 
 export default () => (
