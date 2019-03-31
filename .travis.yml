@@ -22,7 +22,8 @@ script:
 env:
   matrix:
     - TEST_SUITE=simple
-    - TEST_SUITE=installs
+    # does not make sense for this fork
+    # - TEST_SUITE=installs
     - TEST_SUITE=kitchensink
     - TEST_SUITE=kitchensink-eject
     - TEST_SUITE=behavior

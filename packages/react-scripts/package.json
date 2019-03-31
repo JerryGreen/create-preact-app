@@ -1,5 +1,5 @@
 {
-  "name": "@just-boris/react-scripts",
+  "name": "@just-boris/preact-scripts",
   "version": "2.1.8",
   "description": "Configuration and scripts for Create React App.",
   "repository": "just-boris/create-preact-app",
